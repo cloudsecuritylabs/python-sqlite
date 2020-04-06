@@ -10,7 +10,7 @@ conn = sqlite3.connect('tutorialcustomer.db')
 
 # Create a custor to work with the database
 cursor = conn.cursor()
-#cursor.execute("DROP TABLE customers")
+cursor.execute("DROP TABLE customers")
 
 print(30*"=")
 print("Select data")

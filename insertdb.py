@@ -56,7 +56,6 @@ customer_list = [
 ]
 
 # no need to write a loop!
-
 cursor.executemany("INSERT INTO customers (first_name, last_name, email) VALUES(?,?,?)", customer_list)
 
 # commit to database
@@ -65,7 +64,7 @@ conn.commit()
 # Select data from a table to see if everything is ok
 cursor.execute("SELECT * from customers")
 for row in cursor.fetchall():
-    print(row)
+    #print(row)
     print(row[1] +" " + row[2] + " " + row[3])
 
 conn.commit()
